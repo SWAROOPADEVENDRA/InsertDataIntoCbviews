@@ -17,9 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.views.generic import TemplateView
+
+from app.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
 
     # This URL for get response without using views
     path('directhtmlpage/',TemplateView.as_view(template_name='directhtmlpage.html'),name='directhtmlpage'),
+
+    # This URL for template class base view
+    path('InsertdataByTV/',InsertdataByTV.as_view(),name='InsertdataByTV'),
 ]
