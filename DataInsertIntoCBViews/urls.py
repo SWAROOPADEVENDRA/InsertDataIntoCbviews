@@ -27,4 +27,7 @@ urlpatterns = [
 
     # This URL for template class base view
     path('InsertdataByTV/',InsertdataByTV.as_view(),name='InsertdataByTV'),
+
+    #This URL for insert data by using form  view
+    path('DataInsertByFV/',DataInsertByFV.as_view(),name='DataInsertByFV'),
 ]
